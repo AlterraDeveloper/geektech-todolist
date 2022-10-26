@@ -4,22 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson 9</title>
+    <title>Lesson 11</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="todolist-inputs">
-        <input type="text" name="" id="todolist-input" placeholder="Type your next task here..." />
-        <select name="" id="todolist-filter">
-          <option value="all" selected>All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
+    <div class="app-wrapper">
+      <p class="label">ToDoLiSt</p>
+      <div class="todolist">
+        <div class="input-area">
+          <input
+            type="text"
+            id="inputField"
+            class="inputField"
+            placeholder="Start typing next task..."
+          />
+          <select class="selectField" id="filter">
+            <option value="uncompleted">Uncompleted</option>
+            <option value="completed">Completed</option>
+            <option value="all" selected>All</option>
+          </select>
+        </div>
+        <div class="tasks" id="tasks">
+          <div class="TodoListItem">
+            <p><span class="taskAuthor">${task.userId}</span> ${task.title}</p>
+            <div class="TodoListItem-Buttons">
+              <button class="btn TodoListItem-CompleteButton">
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <button class="btn TodoListItem-DeleteButton">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="TodoListItem">
+            <p><span class="taskAuthor">${task.userId}</span> ${task.title}</p>
+            <div class="TodoListItem-Buttons">
+              <button class="btn TodoListItem-CompleteButton">
+                <i class="fa-solid fa-check"></i>
+              </button>
+              <button class="btn TodoListItem-DeleteButton">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <ul class="todolist" id="todolist"></ul>
     </div>
 
-    <script src="index.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

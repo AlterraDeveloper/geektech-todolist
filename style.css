@@ -1,39 +1,155 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
-.wrapper {
+#toUserPage{
   margin: 0 auto;
-  padding-top: 50px;
-  width: 30%;
+  width: 200px;
+  height: 100px;
+  font-size: 36px;
+}
+
+.app-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: #9448e4;
+  background: linear-gradient(90deg, #9448e4 51%, #fa5ff6 82%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.taskAuthor {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.label {
+  color: white;
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
 .todolist {
-  list-style: none;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 40%;
 }
 
-.todolist-todo {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
-
-.todolist-todo.completed span {
-  text-decoration: line-through;
-}
-
-.todolist-remove-todo {
+.addButton {
+  display: inline-block;
   border: none;
-  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  color: #9448e4;
+  line-height: 0;
+}
+
+.inputField,
+.selectField {
+  padding: 10px 20px;
+  min-width: 30%;
+  border: none;
+  font-size: 1.25rem;
+  line-height: 0;
+  width: 20%;
+}
+.input-area {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.TodoListItem {
+  border: 1px solid rgb(158, 151, 151);
+  padding: 0 10px;
+  margin: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: 0;
+  width: inherit;
+  border-radius: 0.5em;
+}
+
+.TodoListItem-DeleteButton,
+.TodoListItem-CompleteButton {
+  display: inline-block;
+  border: none;
+  font-size: 1.3rem;
+  padding: 5px 0px;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.TodoListItem-CompleteButton {
+  background-color: #0d9b0d;
+}
+
+.TodoListItem-DeleteButton {
   background-color: red;
+}
+
+.TodoListItem-DeleteButton:hover,
+.TodoListItem-CompleteButton:hover {
+  cursor: pointer;
+}
+
+.TodoListItem-Buttons {
+  display: flex;
+  width: max-content;
+  height: max-content;
+  border-radius: 10px;
+
+}
+
+.btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+
+.TodoListItem-Complete {
+  transform: scale(0.975);
+  text-decoration: line-through;
+  background-color: #cccccc71;
+  border: none;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
